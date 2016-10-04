@@ -1,0 +1,21 @@
+
+<body style="background-color: #6ba292; margin: 0; padding: 0">
+{{#each model as |getInfo|}}
+<div style="background-color: #3e5c76; margin: 0; padding: 0;">
+  <h1 style="color: #6ba292; margin-left: 40px; background-color:#3e5c76; padding-top: 20px;"> Title of Post: <a style="text-decoration: none; color: #6ba292" href = "{{getInfo.data.url}}">{{getInfo.data.title}} </a> </h1>
+  <div style="margin-bottom: 0; color: #3e5c76; padding: 10px; font-size: 18pt; background-color: #bcd8b7">
+  <div style="margin-left: 10%;">
+   <p> Score: {{getInfo.data.score}} </p>
+  <p> Comment Count: {{getInfo.data.num_comments}} </p>
+  <p>Archived: {{getInfo.data.archived}}</p>
+  {{#if getInfo.data.archived}}
+  <p>Archived</p>
+  {{else}}
+  <p>Not Archived</p>
+  {{/if}}
+  </div>
+  </div>
+  </div>
+{{/each}}
+</body>
+
